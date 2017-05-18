@@ -3,17 +3,11 @@ import sys
 
 
 def load_json_data(filepath):
-    """
-    Loads Json file from directory
-    """
-    with open(filepath, "r") as fjson:
-        return json.loads(fjson.read())
+    with open(filepath, "r") as jsonfile:
+        return json.loads(jsonfile.read())
 
 
 def pretty_print_json(data):
-    """
-    Provides output in pretty print format
-    """
     print(json.dumps(data, indent=4, sort_keys=True, ensure_ascii=False))
 
 
